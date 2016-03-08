@@ -1,0 +1,30 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div>
+
+    <h3>{{ booksModel.pageTitle }}</h3>
+
+    <div ng-show="books.length === 0" class="alert alert-info">
+        <p>No books to be displayed</p>
+    </div>
+    
+    <div class="list-group">
+        <div class="list-group-item" ng-repeat="book in booksModel.books">
+            <a href="#/book/{{book.id}}">
+                <h4 class="list-group-item-heading">
+                    {{book.title}} <small>by {{book.author.name}}</small>
+                </h4>
+                <p class="list-group-item-text">
+                    {{book.genre.name}}
+                </p>
+                <p class="list-group-item-text">
+                    {{book.yearPublished}}
+                </p>
+            </a>
+        </div>
+    </div>
+
+</div>

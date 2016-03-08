@@ -32,10 +32,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
-
+//  '/': {
+//    view: 'homepage'
+//  }
+  
+//  "/book/similarBooks/:bookId": "BookController.similarBooks"
+          
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

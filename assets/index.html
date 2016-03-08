@@ -1,34 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head ng-app="bookApp">
-        <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <head>
+        <title>My Book App</title>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Viewport mobile tag for sensible mobile support -->
-
-
-        <!--
-            Stylesheets and Preprocessors
-            ==============================
-    
-            You can always bring in CSS files manually with `<link>` tags, or asynchronously
-            using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
-            of Sails' conventional asset pipeline (boilerplate Gruntfile).
-    
-            By default, stylesheets from your `assets/styles` folder are included
-            here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
-            are supported. In production, your styles will be minified and concatenated into
-            a single file.
-    
-            To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-            For example, here are a few things you could do:
-    
-                + Change the order of your CSS files
-                + Import stylesheets from other directories
-                + Use a different or additional preprocessor, like SASS, SCSS or Stylus
-        -->
 
         <!--STYLES-->
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -39,7 +16,7 @@
         <!--STYLES END-->
     </head>
 
-    <body class="">
+    <body ng-app="bookApp">
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -53,19 +30,22 @@
                     </button>
                     <a class="navbar-brand" href="#">My Book App</a>
                 </div>
-                
+
                 <!-- Search Form -->
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search Books">
                     </div>
                 </form>
-                
+
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">Authors</a></li>
-                        <li><a href="#contact">Genres</a></li>
+                        <li class="active">
+                            <a href="#/home">Home</a>
+                        </li>
+                        <li><a href="#/books">Books</a></li>
+                        <li><a href="#/authros">Authors</a></li>
+                        <li><a href="#/genres">Genres</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -76,8 +56,8 @@
             <div class="row">
                 <div class="navbar-nav navbar-left">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Authors</a></li>
+                        <li><a href="#/home">Home</a></li>
+                        <li><a href="#/authros">Authors</a></li>
                         <li>J.K Rowling</li>
                     </ol>
                 </div>
@@ -89,10 +69,14 @@
                     View all books
                 </p>
             </div>
-            
+
             <div class="row">
+                <!-- The bootstrap UI alerts -->
+                <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+                    {{alert.msg}}
+                </uib-alert>
                 <div ng-view>
-                    
+
                 </div>
             </div>
 
@@ -109,12 +93,10 @@
         <script src="/bower_components/angular/angular.js"></script>
         <script src="/bower_components/angular-route/angular-route.js"></script>
         <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/js/app.js"></script>
-        <script src="/js/controller/author.js"></script>
         <script src="/js/controller/authors.js"></script>
-        <script src="/js/controller/book.js"></script>
         <script src="/js/controller/books.js"></script>
-        <script src="/js/controller/genre.js"></script>
         <script src="/js/controller/genres.js"></script>
         <script src="/js/service/author.js"></script>
         <script src="/js/service/book.js"></script>

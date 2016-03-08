@@ -12,6 +12,9 @@ module.exports = {
           type: 'string',
           notEmpty: true
       },
+      about: {
+        type: 'string'
+      },
       books: {
           collection: 'book',
           via: 'author'

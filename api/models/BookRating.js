@@ -9,6 +9,9 @@ module.exports = {
             type: 'string',
             notEmpty: true
         },
+        comment: {
+            type: 'string'
+        },
         rating: {
             type: 'float',
             min: 0,
