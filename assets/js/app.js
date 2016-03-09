@@ -14,7 +14,8 @@
         'bookApp.controller.genres',
         'bookApp.controller.genre',
         'bookApp.service.util',
-        'bookApp.directive.bookList'
+        'bookApp.directive.bookList',
+        'bookApp.filter.strToDate'
     ]);
 
 //configure the http service

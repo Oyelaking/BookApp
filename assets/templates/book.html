@@ -37,7 +37,7 @@
         <!--  Book Review/Rating Display -->
         <div class="blog-post">
 
-            <div>
+            <div ng-show="!bookModel.ratingReadOnly">
                 <button type="button" class="btn btn-default" ng-click="showForm = !showForm">Rate Book</button>
                 <div class="blog-post" ng-show="showForm">
                     <form class="css-form">
@@ -50,8 +50,8 @@
                             </ul>
                         </div>
                         <div class="form-group">
-                            <label for="rating">Rating:</label>
-                            <div class="form-control">
+                            <label for="rating">Rating:</label>&nbsp;
+                            <div class="inline-block">
                                 <uib-rating ng-model="bookModel.newRating.rating" max="bookModel.maxRating" read-only="bookModel.ratingReadOnly" 
                                             on-hover="hoveringOver(value)" on-leave="overStar = null"
                                             titles="['one','two','three']" aria-labelledby="default-rating">                                
@@ -79,20 +79,24 @@
 
             <h3>User Ratings & Comments</h3>
 
-            <div ng-repeat="rating in bookModel.book.ratings">
-                <small class="pull-right">
-                    <span am-time-ago="rating.createdAt"></span>
-                </small>
-                <h4>
-                    {{rating.title}} 
-                    <small class="pull-right">
-                        {{rating.rating| number:1}}/{{bookModel.maxRating}}
-                    </small>
-                </h4>
-                <p>
-                    {{rating.comment}}
-                </p>
-                <footer>{{rating.name}}</footer>
+            <div class="list-group">
+                <div class="book-review" ng-repeat="rating in bookModel.book.ratings">
+                    <div>
+                        <small class="pull-right">
+                            {{rating.createdAt | strToDate | date: 'd, MMM, yyyy' }}
+                        </small>
+                    </div>
+                    <h4>
+                        {{rating.title}} 
+                        <small class="pull-right">
+                            {{rating.rating| number:1}}/{{bookModel.maxRating}}
+                        </small>
+                    </h4>
+                    <p>
+                        {{rating.comment}}
+                    </p>
+                    <footer>{{rating.name}}</footer>
+                </div>
             </div>
         </div>
 

@@ -36,6 +36,7 @@
         this.showRatingForm = false;
         this.newBookRating = {};
         this.ratingErrors = [];
+        this.myRating = {};
 
         init();
 
@@ -47,13 +48,6 @@
                 that.similarBooks = response.data;
             }, function (response) {
                 var message = "An error occured while fetching similar books. Error message: " + response.statustext;
-                bootstrapHelper.addAlert(message);
-            });
-            //do the ratings thingies
-            bookService.rating(that.id).then(function (response) {
-                that.bookRating = response.data.rating;
-            }, function (response) {
-                var message = "Error while fetching rating. Error message: " + response.statustext;
                 bootstrapHelper.addAlert(message);
             });
         }
@@ -77,6 +71,11 @@
         function rateBookFunction() {
             if (validateRatingData()) {
                 bookService.rate(this.id, this.newBookRating).then(function (response) {
+                    //take the response and display it
+                    that.ratingReadOnly = true;
+                    that.myRating = that.newBookRating = response.data;
+                    //add to the begining
+                    that.book.ratings.unshift(response.data);
                     bootstrapHelper.addAlert("Book rated!", "success");
                     alert("Successfully rated book");
                 }, function (response) {
