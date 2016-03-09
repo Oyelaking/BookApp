@@ -6,9 +6,23 @@
         "bookApp.service.genre"
     ]);
 
-    module.controller('genresCtrl', ['$scope', 'authorService', genresCtrl]);
+    module.controller('genresCtrl', ['genreService', genresCtrl]);
 
-    function genresCtrl($scope, bookService) {
-        alert("Hi from Genres controller");
+    function genresCtrl(genreService) {
+        alert("hi form Genres");
+
+        var that = this;
+
+        this.genres = [];
+
+        init();
+        
+        function init() {
+            genreService.list().then(function (response) {
+                that.genres = response.data;
+            }, function (response) {
+                alert("Failed to load genres list.");
+            });
+        }
     }
 })();

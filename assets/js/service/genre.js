@@ -3,12 +3,14 @@
  */
 
 //As is our habit, to advance Global Abatement, we use an anonymous function
-(function(){
-    
-    var genreService = angular.module("bookApp.service.genre", []);
-    
-    genreService.service("genreService", ['$http', genreService]);
-    
+(function () {
+
+    var module = angular.module("bookApp.service.genre", [
+        'bookApp.service.urlHelper'
+    ]);
+
+    module.service("genreService", ['$http', 'urlHelper', genreService]);
+
     /*
      * Makes Http requests to the backend concerning the genre resource
      * 
@@ -20,8 +22,31 @@
      * 5. Search authors in a genre
      * 6. Supports pagination via page and limit for all end points
      */
-    function genreService($http){
+    function genreService($http, urlHelper) {
+
+        var endPoint = "/genre";
+        var defaultLimit = 10;
+
+        this.list = function () {
+            var url = endPoint;
+            return $http.get(url);
+        };
         
+        this.get = function(genreId) {
+            var url = endPoint + "/" + genreId;
+            return $http.get(url);
+        };
+
+        this.getBooks = function (id, page, limit) {
+            page = !isNaN(page) ? page : 1;
+            limit = !isNaN(limit) ? limit : defaultLimit;
+            var dataObj = {
+                skip: page - 1 * limit,
+                limit: limit
+            };
+            var url = endPoint + "/getBooks/" + id + "?" + urlHelper.buildParams(dataObj);
+            return $http.get(url);
+        };
     }
-    
+
 })();

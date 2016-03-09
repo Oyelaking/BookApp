@@ -70,6 +70,23 @@
             var url = endPoint + "/similarBooks?id=" + bookId + "&" + urlHelper.buildParams(dataObj);
             return $http.get(url);
         };
+        
+        this.otherBooks = function(bookId, page, limit){
+            page = !isNaN(page) ? page : 1;
+            limit = !isNaN(limit) ? limit : defaultLimit;
+            var dataObj = {
+                skip: page - 1 * limit,
+                limit: limit
+            };
+            var url = endPoint + "/" + bookId + "/other-books" + "?" + urlHelper.buildParams(dataObj);
+            return $http.get(url);
+        };
+        
+        this.rateBook = function(bookId, ratingObj){
+            var url = "/bookrating";
+            ratingObj.book = bookId;
+            return $http.get(url);
+        };
 
         /**
          * Performs book search.

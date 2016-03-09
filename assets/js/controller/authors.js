@@ -5,8 +5,23 @@
     var module = angular.module("bookApp.controller.authors", [
         "bookApp.service.author"
     ]);
-    module.controller('authorsCtrl', ['$scope', 'authorService', authorsCtrl]);
-    function authorsCtrl($scope, bookService) {
-        alert("Hi from Authors controller");
+    module.controller('authorsCtrl', ['authorService', authorsCtrl]);
+    
+    function authorsCtrl(authorService) {
+        
+        var that = this;
+        this.authors = [];
+        
+        init();
+        
+        function init(){
+            authorService.list().then(function(response){
+                that.authors = response.data;
+            }, function(response){
+                var message = "Failed to fetch authors. Server error: " + response.statusText;
+                alert(message);
+            });
+        }
     }
+    
 })();

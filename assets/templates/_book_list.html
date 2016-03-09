@@ -1,0 +1,21 @@
+<div class="list-group">
+    <div class="list-group-item" ng-repeat="book in books">
+        <a href="#/book/{{book.id}}">
+            <h4 class="list-group-item-heading">
+                {{book.title}} <small>by {{book.author.name}}</small>
+                <span class="pull-right">
+                    <uib-rating ng-model="book.rating" max="10" read-only="1" 
+                                on-hover="hoveringOver(value)" on-leave="overStar = null"
+                                titles="['one','two','three']" aria-labelledby="default-rating">                                
+                    </uib-rating>
+                </span>
+            </h4>
+            <p class="list-group-item-text">
+                {{book.genre.name}}
+            </p>
+            <p class="list-group-item-text">
+                {{book.yearPublished}}
+            </p>
+        </a>
+    </div>
+</div>

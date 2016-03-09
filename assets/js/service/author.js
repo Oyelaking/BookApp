@@ -8,9 +8,11 @@
 //in an anonymous function and execute it immediately.
 (function(){
     
-    var module = angular.module("bookApp.service.author", []);
+    var module = angular.module("bookApp.service.author", [
+        'bookApp.service.urlHelper'
+    ]);
     
-    module.service('authorService', ['$http', authorService]);
+    module.service('authorService', ['$http', 'urlHelper', authorService]);
     
     /*
      * Performs REST API requests to the backend for the author resource.
@@ -22,7 +24,7 @@
      * 4. Search Authors
      * 5. Search Author books
      */
-    function authorService($http){
+    function authorService($http, urlHelper){
         
         var endPoint = "/author";
         var defaultLimit = 10;
@@ -36,6 +38,11 @@
             };
             var url = endPoint + "?" + urlHelper.buildParams(dataObj);
             return $http.get(url);
+        };
+        
+        this.get = function(id){
+           var url = endPoint + "/" + id;
+           return $http.get(url);
         };
         
         this.getBooks = function (authorId, page, limit){

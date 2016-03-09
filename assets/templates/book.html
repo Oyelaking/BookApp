@@ -5,16 +5,96 @@
         <div class="blog-post">
             <h2 class="blog-post-title">
                 {{bookModel.book.title}}
-                <small class="align-right">Rating: {{bookModel.book.rating}}/5</small>
+                <small class="align-right" ng-show="bookModel.book.ratings.length > 0">
+                    Rating: {{bookModel.book.rating| number:1}}/{{bookModel.maxRating}}
+                </small>
+                <small class="align-right" ng-show="bookModel.book.ratings.length === 0">
+                    No Ratings Yet
+                </small>
             </h2>
+            <p>
+            <uib-rating ng-model="bookModel.book.rating" max="bookModel.maxRating" read-only="1" 
+                        on-hover="hoveringOver(value)" on-leave="overStar = null"
+                        titles="['one','two','three']" aria-labelledby="default-rating">                                
+            </uib-rating>
+            <span class="label" ng-class="{'label-warning': percent < 30, 
+                            'label-info': percent >= 30 && percent < 70, 
+                            'label-success': percent >= 70}" ng-show="overStar && !isReadonly">
+                {{percent}}%
+            </span>
+            </p>
             <p class="blog-post-meta">
-                {{bookModel.book.yearPublished}} by <a href="#">{{bookModel.book.author.name}}</a>
+                {{bookModel.book.yearPublished}} by <a href="#/author/{{bookModel.book.author.id}}">
+                    {{bookModel.book.author.name}}
+                </a>
             </p>
 
             <p>
                 {{bookModel.book.description}}
             </p>
         </div><!-- /.blog-post -->
+
+        <!--  Book Review/Rating Display -->
+        <div class="blog-post">
+
+            <div>
+                <button type="button" class="btn btn-default" ng-click="showForm = !showForm">Rate Book</button>
+                <div class="blog-post" ng-show="showForm">
+                    <form class="css-form">
+                        <!-- Errors display -->
+                        <div ng-show="bookModel.ratingErrors.length > 0">
+                            <ul class="error">
+                                <li ng-repeat="error in bookModel.ratingErrors">
+                                    {{error}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rating:</label>
+                            <div class="form-control">
+                                <uib-rating ng-model="bookModel.newRating.rating" max="bookModel.maxRating" read-only="bookModel.ratingReadOnly" 
+                                            on-hover="hoveringOver(value)" on-leave="overStar = null"
+                                            titles="['one','two','three']" aria-labelledby="default-rating">                                
+                                </uib-rating>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title:</label>
+                            <input class="form-control" id="title" type="text" ng-model="bookModel.newRating.title" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comment:</label>
+                            <textarea required class="form-control" id="comment" type="text" ng-model="bookModel.newRating.comment">
+                        
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input required class="form-control" id="name" type="text" ng-model="bookModel.newRating.name" />
+                        </div>
+                        <button ng-click="bookModel.rateBook()" class="btn btn-default">Submit Rating</button>
+                    </form>
+                </div>
+            </div>
+
+            <h3>User Ratings & Comments</h3>
+
+            <div ng-repeat="rating in bookModel.book.ratings">
+                <small class="pull-right">
+                    <span am-time-ago="rating.createdAt"></span>
+                </small>
+                <h4>
+                    {{rating.title}} 
+                    <small class="pull-right">
+                        {{rating.rating| number:1}}/{{bookModel.maxRating}}
+                    </small>
+                </h4>
+                <p>
+                    {{rating.comment}}
+                </p>
+                <footer>{{rating.name}}</footer>
+            </div>
+        </div>
 
     </div><!-- /.blog-main -->
 
@@ -25,7 +105,7 @@
                 {{bookModel.book.author.description}}
             </p>
         </div>
-        <div class="sidebar-module">
+        <div class="sidebar-module" ng-hide="bookModel.otherBooks.length === 0">
             <h4>Other Books by {{bookModel.book.author.name}}</h4>
             <ol class="list-unstyled">
                 <li ng-repeat="otherBook in bookModel.otherBooks">
@@ -33,7 +113,7 @@
                 </li>
             </ol>
         </div>
-        <div class="sidebar-module">
+        <div class="sidebar-module" ng-hide="bookModel.similarBooks.length === 0">
             <h4>Similar Books by other Authors</h4>
             <ol class="list-unstyled">
                 <li ng-repeat="similarBook in bookModel.similarBooks">

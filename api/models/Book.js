@@ -27,24 +27,12 @@ module.exports = {
         genre: {
             model: 'genre'
         },
+        rating: {
+            type: 'float'
+        },
         ratings: {
             collection: 'bookrating',
             via: 'book'
-        },
-        /**
-         * Gets the average rating for a book
-         * 
-         * @param {string|object} options the record or bookId to get the average
-         * rating for
-         * @param {function} callBack
-         * @returns {undefined}
-         */
-        averateRating: function () {
-            var totalRatings = 0;
-            this.ratings.forEach(function (value, key) {
-                totalRatings += value.rating;
-            });
-            return callBack(null, totalRatings / book.ratings.length);
         }
     },
     /**

@@ -30,6 +30,12 @@
         this.book = {};
         this.otherBooks = [];
         this.similarBooks = [];
+        this.maxRating = 10;
+        this.ratingReadOnly = false;
+        this.bookRating = 0;
+        this.showRatingForm = false;
+        this.newBookRating = {};
+        this.ratingErrors = [];
 
         init();
 
@@ -41,6 +47,13 @@
                 that.similarBooks = response.data;
             }, function (response) {
                 var message = "An error occured while fetching similar books. Error message: " + response.statustext;
+                bootstrapHelper.addAlert(message);
+            });
+            //do the ratings thingies
+            bookService.rating(that.id).then(function (response) {
+                that.bookRating = response.data.rating;
+            }, function (response) {
+                var message = "Error while fetching rating. Error message: " + response.statustext;
                 bootstrapHelper.addAlert(message);
             });
         }
@@ -62,12 +75,25 @@
         }
 
         function rateBookFunction() {
-            bookService.rate(this.id).then(function (response) {
-                bootstrapHelper.addAlert("Book rated!", "success");
-            }, function (response) {
-                var message = "Failed to rate book. Error message: " + response.statustext;
-                bootstrapHelper.addAlert(message);
-            });
+            if (validateRatingData()) {
+                bookService.rate(this.id, this.newBookRating).then(function (response) {
+                    bootstrapHelper.addAlert("Book rated!", "success");
+                    alert("Successfully rated book");
+                }, function (response) {
+                    var message = "Failed to rate book. Error message: " + response.statustext;
+                    bootstrapHelper.addAlert(message);
+                });
+            }
+        }
+
+        function validateRatingData() {
+            var fields = ['rating', 'comment', 'title', 'name'];
+            for (var fieldIndex in fields) {
+                if (!that.newBookRating[fields[fieldIndex]]) {
+                    that.ratingErrors.push(fields[fieldIndex] + " must be filled");
+                }
+            }
+            return that.ratingErrors.length === 0;
         }
     }
 

@@ -1,11 +1,13 @@
+/**
+ * BookRating.js
+ *
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
+ */
 
 module.exports = {
-    
     attributes: {
-        book: {
-            model: 'book'
-        },
-        session_id: {
+        user_session: {
             type: 'string',
             notEmpty: true
         },
@@ -13,9 +15,25 @@ module.exports = {
             type: 'string'
         },
         rating: {
-            type: 'float',
+            type: 'integer',
             min: 0,
-            max: 5
+            max: 10
+        },
+        name: {
+            type: 'string'
+        },
+        title: {
+            type: 'string'
+        },
+        book: {
+            model: 'book'
         }
+    },
+    afterUpdate: function (record, callBack) {
+        BookRatingService.calculateRating(record, callBack);
+    },
+    afterCreate: function (record, callBack) {
+        BookRatingService.calculateRating(record, callBack);
     }
 };
+

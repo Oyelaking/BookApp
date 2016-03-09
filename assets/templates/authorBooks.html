@@ -1,0 +1,19 @@
+<div>
+
+    <h3>{{authorModel.author.name}}</h3>
+
+    <div ng-show="authorModel.books.length === 0" class="alert alert-info">
+        <p>No books to be displayed</p>
+    </div>
+
+    <p>
+        {{authorModel.author.about}}
+    </p>
+    
+    <br/>
+
+    <h4>Books by {{authorModel.author.name}}</h4>
+    <br/>
+    <book-list books="authorModel.books"></book-list>
+
+</div>

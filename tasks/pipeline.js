@@ -38,7 +38,8 @@ var jsFilesToInject = [
   'bower_components/angular/angular.js',
   'bower_components/angular-route/angular-route.js',
   'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-  'bower_components/bootstrap/dist/js/boostrap.min.js',
+  'bower_components/angular-moment/angular-moment.min.js',
+  'bower_components/bootstrap/dist/js/bootstrap.min.js',
   
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',

@@ -11,20 +11,6 @@ and open the template in the editor.
         <p>No books to be displayed</p>
     </div>
     
-    <div class="list-group">
-        <div class="list-group-item" ng-repeat="book in booksModel.books">
-            <a href="#/book/{{book.id}}">
-                <h4 class="list-group-item-heading">
-                    {{book.title}} <small>by {{book.author.name}}</small>
-                </h4>
-                <p class="list-group-item-text">
-                    {{book.genre.name}}
-                </p>
-                <p class="list-group-item-text">
-                    {{book.yearPublished}}
-                </p>
-            </a>
-        </div>
-    </div>
+    <book-list books="booksModel.books"></book-list>
 
 </div>
