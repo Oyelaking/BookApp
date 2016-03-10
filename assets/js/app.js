@@ -57,6 +57,6 @@
     appModule.controller('appCtrl', ['$scope', appController]);
 
     function appController() {
-        alert("Hi form AppController");
+        console.log("Hi form AppController");
     }
 })();

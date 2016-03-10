@@ -18,7 +18,7 @@
         this.id = $routeParams.bookId;
 
         //the rate book function
-        this.rate = rateBookFunction;
+        this.rateBook = rateBookFunction;
 
         if (!this.id) {//no book id specified
             bootstrapHelper.addAlert("No book specified");
@@ -34,7 +34,7 @@
         this.ratingReadOnly = false;
         this.bookRating = 0;
         this.showRatingForm = false;
-        this.newBookRating = {};
+        this.newRating = {};
         this.ratingErrors = [];
         this.myRating = {};
 
@@ -69,11 +69,13 @@
         }
 
         function rateBookFunction() {
+            //reset errors first
+            this.ratingErrors = [];
             if (validateRatingData()) {
-                bookService.rate(this.id, this.newBookRating).then(function (response) {
+                bookService.rateBook(this.id, this.newRating).then(function (response) {
                     //take the response and display it
                     that.ratingReadOnly = true;
-                    that.myRating = that.newBookRating = response.data;
+                    that.myRating = that.newRating = response.data;
                     //add to the begining
                     that.book.ratings.unshift(response.data);
                     bootstrapHelper.addAlert("Book rated!", "success");
@@ -88,7 +90,7 @@
         function validateRatingData() {
             var fields = ['rating', 'comment', 'title', 'name'];
             for (var fieldIndex in fields) {
-                if (!that.newBookRating[fields[fieldIndex]]) {
+                if (!that.newRating[fields[fieldIndex]]) {
                     that.ratingErrors.push(fields[fieldIndex] + " must be filled");
                 }
             }

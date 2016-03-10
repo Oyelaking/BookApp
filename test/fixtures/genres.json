@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Action"
+    },
+    {
+        "id": 2,
+        "name": "Horror"
+    },
+    {
+        "id": 3,
+        "name": "Fantasy"
+    },
+    {
+        "id": 4,
+        "name": "Epic"
+    },
+    {
+        "id": 5,
+        "name": "Contemporary"
+    },
+    {
+        "id": 6,
+        "name": "Classics"
+    },
+    {
+        "id": 7,
+        "name": "Christian Fiction"
+    },
+    {
+        "id": 8,
+        "name": "Childrens"
+    },
+    {
+        "id": 9,
+        "name": "Adventure"
+    },
+    {
+        "id": 10,
+        "name": "Adult Fiction"
+    }
+]

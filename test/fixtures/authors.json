@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "J.K Rowling",
+        "about": "Joanne 'Jo' Rowling, OBE FRSL, pen names J. K. Rowling and Robert Galbraith, is a British novelist, screenwriter and film producer best known as the author of the Harry Potter fantasy series"
+    },
+    {
+        "id": 2,
+        "name": "Robert Jordan",
+        "about": "James Oliver Rigney, Jr., (October 17, 1948 – September 16, 2007) better known by his pen name Robert Jordan,[1] was an American author of epic fantasy. He is best known for The Wheel of Time series, which comprises 14 books and a prequel novel. He is one of the several writers who have written 7 original Conan the Barbarian novels that are highly acclaimed to this day.[2] Rigney also wrote historical fiction under his pseudonym Reagan O'Neal, a western as Jackson O'Reilly, and dance criticism as Chang Lung. Additionally, he ghostwrote an 'international thriller' that is still believed to have been written by someone else"
+    },
+    {
+        "id": 3,
+        "name": "Jonathan Stroud",
+        "about": "Jonathan Anthony Stroud (born 27 October 1970) is a British writer of fantasy fiction, mainly for children and young adults. Born in 1970 in Bedford, England, Stroud began to write stories at a very young age. He grew up in St Albans where he enjoyed reading books, drawing pictures, and writing stories. Between the ages seven and nine he was often ill, so he spent most of his days in the hospital or in his bed at home. To escape boredom, he would occupy himself with books and stories.[1] After he completed his studies of English literature at the University of York, he worked in London as an editor for the Walker Books store. During the 1990s, he started publishing his own works and quickly gained success"
+    },
+    {
+        "id": 4,
+        "name": "Terry Goodkind",
+        "about": "Terry Goodkind (born in 1948)[1] is an American writer. He is known for the epic fantasy The Sword of Truth series as well as the contemporary suspense novel The Law of Nines, which has ties to his fantasy series. The Sword of Truth series sold twenty-five million copies worldwide and was translated into more than twenty languages.[2] It was adapted into a television series called Legend of the Seeker; it premiered on November 1, 2008, and ran for two seasons, ending in May 2010"
+    }
+]

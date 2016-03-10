@@ -1,3 +1,5 @@
+/* global BookRatingService */
+
 /**
  * BookRating.js
  *
@@ -9,21 +11,26 @@ module.exports = {
     attributes: {
         user_session: {
             type: 'string',
-            notEmpty: true
+            notEmpty: true,
+            required: true
         },
         comment: {
-            type: 'string'
+            type: 'string',
+            required: true
         },
         rating: {
             type: 'integer',
+            required: true,
             min: 0,
             max: 10
         },
         name: {
-            type: 'string'
+            type: 'string',
+            required: true
         },
         title: {
-            type: 'string'
+            type: 'string',
+            required: true
         },
         book: {
             model: 'book'

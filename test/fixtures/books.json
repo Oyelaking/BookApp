@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "title": "Harry Potter and the Socerer's stone",
+        "author": "1",
+        "yearPublished": 1997,
+        "genre": "8",
+        "description": "Harry Potter and the Philosopher's Stone is the first novel in the Harry Potter series and J. K. Rowling's debut novel, first published in 1997 by Bloomsbury. Twists and turns make this first story in the series resemble a junior Grisham thriller in which loose ends are expertly tied and more threads become compellingly unraveled"
+    },
+    {
+        "id": "2",
+        "title": "Harry Potter and the Chambers of Secret",
+        "author": "1",
+        "yearPublished": 1997,
+        "genre": "3",
+        "description": "Harry Potter and the Philosopher's Stone is the first novel in the Harry Potter series and J. K. Rowling's debut novel, first published in 1997 by Bloomsbury. Twists and turns make this first story in the series resemble a junior Grisham thriller in which loose ends are expertly tied and more threads become compellingly unraveled"
+    },
+    {
+        "id": "3",
+        "title": "Harry Potter and the Socerer's stone",
+        "author": "1",
+        "yearPublished": 1997,
+        "genre": "3",
+        "description": "Harry Potter and the Philosopher's Stone is the first novel in the Harry Potter series and J. K. Rowling's debut novel, first published in 1997 by Bloomsbury. Twists and turns make this first story in the series resemble a junior Grisham thriller in which loose ends are expertly tied and more threads become compellingly unraveled"
+    },
+    {
+        "id": "4",
+        "title": "Wizard's First Rule",
+        "author": "4",
+        "yearPublished": 1997,
+        "genre": "3",
+        "description": "Richard Cypher must defeat the evil magical tyrant in this epic start to what turns out to be a very bloody and long winded series."
+    }
+]

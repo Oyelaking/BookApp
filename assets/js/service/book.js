@@ -85,7 +85,7 @@
         this.rateBook = function(bookId, ratingObj){
             var url = "/bookrating";
             ratingObj.book = bookId;
-            return $http.get(url);
+            return $http.post(url, ratingObj);
         };
 
         /**

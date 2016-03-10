@@ -34,7 +34,7 @@ module.exports = {
                 return res.notFound("No similar books could be found");
             }
             res.set("Content-Type", "text/json");
-            res.end(JSON.stringify(books));
+            res.json(books);
         }
     },
     
