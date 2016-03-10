@@ -12,6 +12,6 @@
 
 module.exports = {
 
-    'sails.config.enviroment': 'production'
+    'sails.config.enviroment': 'production',
 
 };
