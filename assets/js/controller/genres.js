@@ -9,7 +9,6 @@
     module.controller('genresCtrl', ['genreService', genresCtrl]);
 
     function genresCtrl(genreService) {
-        alert("hi form Genres");
 
         var that = this;
 
