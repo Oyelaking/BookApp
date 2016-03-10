@@ -80,6 +80,14 @@ module.exports.connections = {
     user: 'YOUR_POSTGRES_USER',
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
+  },
+  
+  liveMongoDb: {
+      adapter: 'sails-mongo',
+      host: 'ds011389.mlab.com:11389/heroku_ph32mlcq',
+      user: 'book_app_user',
+      password: 'The_Lord_of_the_Morning',
+      database: 'book_app'
   }
 
 
@@ -88,5 +96,5 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
-
+ 
 };
