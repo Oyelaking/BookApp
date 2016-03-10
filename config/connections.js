@@ -84,10 +84,11 @@ module.exports.connections = {
   
   liveMongoDb: {
       adapter: 'sails-mongo',
-      host: 'ds011389.mlab.com:11389/heroku_ph32mlcq',
+      host: 'ds011389.mlab.com',
+      port: 11389,
       user: 'book_app_user',
       password: 'The_Lord_of_the_Morning',
-      database: 'book_app'
+      database: 'heroku_ph32mlcq'
   }
 
 
