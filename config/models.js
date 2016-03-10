@@ -28,5 +28,6 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
    migrate: 'alter', //We ask sails to alter until we go into production, then it's safe
-   connection: 'bookAppMongoDb'
+//   connection: 'bookAppMongoDb'
+   connection: 'liveMongoDb'
 };
