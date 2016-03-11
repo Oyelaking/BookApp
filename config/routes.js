@@ -48,4 +48,5 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+    'post /author/bulkCreate': 'AuthorController.bulkCreate'
 };

@@ -30,5 +30,133 @@
         "yearPublished": 1997,
         "genre": "3",
         "description": "Richard Cypher must defeat the evil magical tyrant in this epic start to what turns out to be a very bloody and long winded series."
+    },
+    {
+        "id": "5",
+        "title": "Fist of God",
+        "author": "13",
+        "yearPublished": 1994,
+        "genre": "1",
+        "description": "The Fist of God is a 1994 suspense novel by British writer Frederick Forsyth. Featuring a story set during the Persian Gulf War, the novel details an Allied effort to find a suspected Iraqi nuclear weapon"
+    },
+    {
+        "id": "6",
+        "title": "The Odessa File",
+        "author": "13",
+        "yearPublished": 1972,
+        "genre": "1",
+        "description": "The Odessa File is a thriller by Frederick Forsyth, first published in 1972, about the adventures of a young German reporter attempting to discover the location of a former SS concentration-camp commander."
+    },
+    {
+        "id": "7",
+        "title": "Dogs of War",
+        "author": "4",
+        "yearPublished": 1981,
+        "genre": "10",
+        "description": "The Dogs of War is a war novel by Frederick Forsyth featuring a small group of European and African mercenary soldiers hired by a British industrialist to depose the government of the fictional African country of Zangaro"
+    },
+    {
+        "id": "8",
+        "title": "Avenger",
+        "author": "13",
+        "yearPublished": 2003,
+        "genre": "10",
+        "description": "Avenger is a political thriller novel by Frederick Forsyth published in September 2003. This was adapted for television in the 2006 film Avenger starring Sam Elliot"
+    },
+    {
+        "id": "9",
+        "title": "The Belgariad",
+        "author": "5",
+        "yearPublished": 1984,
+        "genre": "9",
+        "description": "The Belgariad is a five-book fantasy epic written by David Eddings, following the picaresque journey of protagonist 'Garion' and his companions, first to recover a sacred stone, and later to use it against antagonist 'Kal Torak'"
+    },
+    {
+        "id": "10",
+        "title": "Belgarath the Sorcerer",
+        "author": "5",
+        "yearPublished": 1995,
+        "genre": "9",
+        "description": "Belgarath the Sorcerer is a book by David Eddings and Leigh Eddings. Set in the same universe as the Eddings' The Belgariad and The Malloreon, it is a prequel to the other series, although the framework"
+    },
+    {
+        "id": "11",
+        "title": "Polgara the Sorceress",
+        "author": "5",
+        "yearPublished": 1995,
+        "genre": "9",
+        "description": "Polgara the Sorceress is a fantasy novel by David and Leigh Eddings, and the twelfth in the setting of The Belgariad, The Malloreon and Belgarath the Sorcerer"
+    },
+    {
+        "id": "12",
+        "title": "Sorceress of Darshiva",
+        "author": "5",
+        "yearPublished": 1989,
+        "genre": "9",
+        "description": "Garion and his companions continue their desperate search for Zandramas, the Child of Dark and abductor of Garion's baby son, Gera"
+    },
+    {
+        "id": "13",
+        "title": "Demon Lord of Daranda",
+        "author": "5",
+        "yearPublished": 1988,
+        "genre": "9",
+        "description": "In this third book of The Malloreon, the company now knows that Garion's baby son has been kidnapped by Zandramas and is to be used in a ritual which will make the Dark Destiny supreme"
+    },
+    {
+        "id": "14",
+        "title": "The Hidden City",
+        "author": "5",
+        "yearPublished": 2003,
+        "genre": "9",
+        "description": "Final volume in the fantasy Tamuli trilogy. Prince Sparhawk and his allies battle to rescue Queen Ehlana from the hidden city of Cyrga"
+    },
+    {
+        "id": "15",
+        "title": "The Shinning Ones",
+        "author": "5",
+        "yearPublished": 1994,
+        "genre": "9",
+        "description": "Years past, the Child-Goddess Aphrael had hidden Bhelliom, the Stone Power. It rested at the very bottom of the deepest ocean, that nevermore should its awesome power sing temptation to mortal men"
+    },
+    {
+        "id": "16",
+        "title": "Steel Heart",
+        "author": "6",
+        "yearPublished": 2013,
+        "genre": "9",
+        "description": "Ten years ago, Calamity came. It was a burst in the sky that gave ordinary men and women extraordinary powers. The awed public started calling them Epics. But Epics are no friend of man. With incredible gifts came the desire to rule"
+    },
+    {
+        "id": "17",
+        "title": "Words of Radiance",
+        "author": "6",
+        "yearPublished": 2014,
+        "genre": "4",
+        "description": "Words of Radiance is the second book of The Stormlight Archive epic fantasy series written by American author Brandon Sanderson. It was published by Tor Books and released on March 4, 2014."
+    },
+    {
+        "id": "18",
+        "title": "Alcatraz Versus the Evil Librarians",
+        "author": "6",
+        "yearPublished": 2007,
+        "genre": "5",
+        "description": "Alcatraz Versus the Evil Librarians is a juvenile fiction novel by Brandon Sanderson, published in October 2007 by Scholastic Press. The book is named after its main character, Alcatraz Smedr"
+    },
+    {
+        "id": "19",
+        "title": "Wart Breaker",
+        "author": "6",
+        "yearPublished": 2009,
+        "genre": "10",
+        "description": "Warbreaker is a stand-alone fantasy novel written by American author Brandon Sanderson. It was first published in June 2009 by Tor Books. Sanderson released several rewrites of Warbreaker under a Creative Commons license, one chapter at a time."
+    },
+    {
+        "id": "20",
+        "title": "Hunt for Red October",
+        "author": "14",
+        "yearPublished": 1984,
+        "genre": "1",
+        "description": "The Hunt for Red October was Tom Clancy's 1984 debut novel. The story follows a CIA analyst who leads a group of US Naval officers to take possession of a cutting-edge Soviet nuclear submarine from 26"
     }
 ]

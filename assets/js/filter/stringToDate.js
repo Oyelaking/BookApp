@@ -10,7 +10,6 @@
 
     module.filter('strToDate', function () {
         var filterFunc = function (dateString) {
-            alert("In strToDate");
             if(!dateString || dateString.trim() === ""){
                 return "";
             }

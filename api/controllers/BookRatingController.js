@@ -16,15 +16,8 @@ module.exports = {
      * @returns {undefined}
      */
     create: function (req, res) {
-        //get the session id from session
-        var sessionId = req.session.sid;
-        console.log("SessionId: " + sessionId);
-        if (!sessionId) {
-            return res.badRequest("Could not identify you. Make sure cookies are enabled");
-        }
         var createData = req.body;
         console.log("CreateData: " + JSON.stringify(createData));
-        createData.user_session = sessionId;
         //make sure that the use has not rated the book before
 //        BookRating.findOne({
 //            'user_session': sessionId,
@@ -37,6 +30,57 @@ module.exports = {
             }
             return res.json(createdRating);
         }
+    },
+    /**
+     * Performs bulk updates
+     * @param {Request} req
+     * @param {Response} res
+     * @returns {undefined}
+     */
+    bulkCreate: function (req, res) {
+        console.log("In bulk create...");
+        /**
+         * 
+         * @type array
+         */
+        var data = req.body;
+        if (!data.length) {
+            return res.badRequest("Invalid request data");
+        }
+        var response = [];
+        data.forEach(function (element) {
+            //first check that if an id is specified, the id doesn't already exist in the db
+            if (element.id) {
+                BookRating.findOne(element.id).exec(function (err, foundRecord) {
+                    if (foundRecord) {
+                        element.error = {
+                            "message": "A record with the id already exists"
+                        };
+                        response.push(element);
+                    } else {
+                        createBook(element);
+                    }
+                });
+            } else {
+                createBook(element);
+            }
+
+            function createBook(ratingData) {
+                console.log("Creating record...");
+                BookRating.create(ratingData).exec(function (err, createdResponse) {
+                    if (err) {
+                        console.log("Failed to create record: " + JSON.stringify(err));
+                        ratingData.error = err;
+                        response.push(ratingData);
+                    } else {
+                        console.log("Successfully created record with id: " + ratingData.id);
+                        response.push(createdResponse);
+                    }
+                });
+            }
+        });
+        //send response
+        return res.json(response);
     }
 
 };

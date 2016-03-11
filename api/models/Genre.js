@@ -6,16 +6,20 @@
  */
 
 module.exports = {
-
-  attributes: {
-      name: {
-          type: 'string',
-          notEmpty: true
-      },
-      books: {
-          collection: 'book',
-          via: 'genre'
-      }
-  }
+    attributes: {
+        id: {
+            type: 'integer',
+            primaryKey: true,
+            unique: true
+        },
+        name: {
+            type: 'string',
+            notEmpty: true
+        },
+        books: {
+            collection: 'book',
+            via: 'genre'
+        }
+    }
 };
 

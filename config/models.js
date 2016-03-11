@@ -27,6 +27,7 @@ module.exports.models = {
   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-   migrate: 'alter', //We ask sails to alter until we go into production, then it's safe
-   connection: 'bookAppMongoDb'
+   migrate: 'safe', //We ask sails to alter until we go into production, then it's safe
+   connection: 'bookAppMongoDb',
+   autoPk: false
 };

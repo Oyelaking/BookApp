@@ -18,5 +18,85 @@
         "id": 4,
         "name": "Terry Goodkind",
         "about": "Terry Goodkind (born in 1948)[1] is an American writer. He is known for the epic fantasy The Sword of Truth series as well as the contemporary suspense novel The Law of Nines, which has ties to his fantasy series. The Sword of Truth series sold twenty-five million copies worldwide and was translated into more than twenty languages.[2] It was adapted into a television series called Legend of the Seeker; it premiered on November 1, 2008, and ran for two seasons, ending in May 2010"
+    },
+    {
+        "id": 5,
+        "name": "David Eddings",
+        "about": "David Eddings was an American fantasy writer. With his wife Leigh, he authored several best-selling epic fantasy novel series, including The Belgariad, The Malloreon, The Elenium, The Tamuli and The Dreamers"
+    },
+    {
+        "id": 6,
+        "name": "Brandon Sanderson",
+        "about": "Brandon Sanderson is an American fantasy and science fiction writer. He is best known for his Mistborn series and his work in finishing Robert Jordan's epic fantasy series The Wheel of Time"
+    },
+    {
+        "id": 7,
+        "name": "J.R.R. Tolkien",
+        "about": "John Ronald Reuel Tolkien CBE FRSL was an English writer, poet, philologist, and university professor who is best known as the author of the classic high-fantasy works The Hobbit, The Lord of the Rings, and The Silmarillion"
+    },
+    {
+        "id": 8,
+        "name": "James Patterson",
+        "about": "James Brendan Patterson is an American author. He is largely known for his novels about fictional psychologist Alex Cross, the protagonist of the Alex Cross series"
+    },
+    {
+        "id": 9,
+        "name": "John Grisham",
+        "about": "John Ray Grisham, Jr. is an American bestselling writer, attorney, politician, and activist best known for his popular legal thrillers. His books have been translated into 42 languages and published worldwide."
+    },
+    {
+        "id": 10,
+        "name": "Sidney Sheldon",
+        "about": "Sidney Sheldon was an American writer and producer. He came to prominence in the 1930s, first working on Broadway plays and then in motion pictures, notably writing the successful comed"
+    },
+    {
+        "id": 11,
+        "name": "Dan Brown",
+        "about": "Daniel 'Dan' Brown is an American author of thriller fiction who is best known for the 2003 bestselling novel The Da Vinci Code"
+    },
+    {
+        "id": 12,
+        "name": "Jefrey Archer",
+        "about": "Jeffrey Howard Archer, Baron Archer of Weston-super-Mare is an English author and former politician. Before becoming an author, Archer was a Member of Parliament, but resigned over a financial scandal that left him almost bankrupt"
+    },
+    {
+        "id": 13,
+        "name": "Frederick Forsyth",
+        "about": "Frederick Forsyth, CBE is an English author, former journalist and spy, and occasional political commentator."
+    },
+    {
+        "id": 14,
+        "name": "Tom Clancy",
+        "about": "Thomas Leo Clancy, Jr. (April 12, 1947 – October 1, 2013) was an American novelist and video game designer best known for his technically detailed espionage and military science storylines set during and after the Cold War. Seventeen of his novels were bestsellers, and more than 100 million copies of his books are in print.[1] His name was also used on movie scripts written by ghost writers, non-fiction books on military subjects, and video games. He was a part-owner of the Baltimore Orioles and Vice Chairman of their Community Activities and Public Affairs committees."
+    },
+    {
+        "id": 15,
+        "name": "R.A. Salvatore",
+        "about": "Robert Anthony Salvatore, who writes under the name R. A. Salvatore, is an American author best known for The DemonWars Saga, his Forgotten Realms novels, for which he created the popular character "
+    },
+    {
+        "id": 16,
+        "name": "Noel Barber",
+        "about": "Noel Barber was a British novelist and journalist. Many of his novels, considered exotic, are about his experiences as leading foreign correspondent for the Daily Mail. He had two brothers: Kenneth, a banker, and Anthony Barber, Baron Barber."
+    },
+    {
+        "id": 17,
+        "name": "Sir Arthur Conan Doyle",
+        "about": "Sir Arthur Ignatius Conan Doyle KStJ, DL was a British writer and physician, most noted for his fictional stories about the detective Sherlock Holmes, which are generally considered milestones in the field of crime fiction"
+    },
+    {
+        "id": 18,
+        "name": "Charles Dickens",
+        "about": "Charles John Huffam Dickens was an English writer and social critic. He created some of the world's best-known fictional characters and is regarded as the greatest novelist of the Victorian era"
+    },
+    {
+        "id": 19,
+        "name": "Jules Verne",
+        "about": "Jules Gabriel Verne was a French novelist, poet, and playwright best known for his adventure novels and his profound influence on the literary genre of science fiction"
+    },
+    {
+        "id": 20,
+        "name": "C.S. Lewis",
+        "about": "Clive Staples Lewis was a British novelist, poet, academic, medievalist, literary critic, essayist, lay theologian, broadcaster, lecturer, and Christian apologist"
     }
 ]

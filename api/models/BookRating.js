@@ -9,11 +9,11 @@
 
 module.exports = {
     attributes: {
-        user_session: {
-            type: 'string',
-            notEmpty: true,
-            required: true
-        },
+//        user_session: {
+//            type: 'string',
+//            notEmpty: true,
+//            required: true
+//        },
         comment: {
             type: 'string',
             required: true
