@@ -22,11 +22,11 @@
         function init(){
             genreService.get(that.id).then(function(response){
                 that.genre = response.data;
-                genreService.list(that.id).then(function(response){
-                    that.books = response.data;
-                }, function(response){
-                    alert("Failed to load books in genre");
-                });
+//                genreService.getBooks(that.id).then(function(response){
+//                    that.books = response.data;
+//                }, function(response){
+//                    alert("Failed to load books in genre");
+//                });
             }, function(response){
                 alert("Failed to load data");
             });

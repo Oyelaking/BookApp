@@ -2,7 +2,7 @@
 
     <h3>{{genreModel.genre.name}} Genre</h3>
 
-    <div ng-show="genreModel.books.length === 0" class="alert alert-info">
+    <div ng-show="genreModel.genre.books.length === 0" class="alert alert-info">
         <p>No books to be displayed</p>
     </div>
     
@@ -10,6 +10,6 @@
 
     <h4>Books in {{genreModel.genre.name}} Genre</h4>
     <br/>
-    <book-list books="authorModel.books"></book-list>
+    <book-list books="genreModel.genre.books"></book-list>
 
 </div>
