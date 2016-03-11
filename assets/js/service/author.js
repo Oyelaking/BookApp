@@ -27,7 +27,7 @@
     function authorService($http, urlHelper){
         
         var endPoint = "/author";
-        var defaultLimit = 10;
+        var defaultLimit = 20;
         
         this.list = function(page, limit){
             page = !isNaN(page) ? page : 1;

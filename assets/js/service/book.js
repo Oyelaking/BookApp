@@ -29,7 +29,7 @@
     function bookService($http, urlHelper) {
 
         var endPoint = "/book";
-        var defaultLimit = 10;
+        var defaultLimit = 20;
 
         /**
          * Lists books.

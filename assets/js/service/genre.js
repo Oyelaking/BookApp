@@ -25,7 +25,7 @@
     function genreService($http, urlHelper) {
 
         var endPoint = "/genre";
-        var defaultLimit = 10;
+        var defaultLimit = 20;
 
         this.list = function () {
             var url = endPoint;
